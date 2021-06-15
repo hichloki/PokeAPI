@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding: 0;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ /*   color: gold;*/
+ color :#08002b;
+  
+  /*  box-sizing: border-box;*/
+}
+html { 
+    margin:0;
+    padding:0;
+    background-color: #08002b;
+    background: url("../img/fond_img.jpg") no-repeat center fixed; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+  }
+li {
+    list-style-type: none;
+}
+header
+{
+    width:100%;
+    height: 50px;
+  /*  background-color: #08002b;*/
+}
+#nav
+{
+    width:90%;
+    margin: 0 auto;
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+ /*   background-color: #08002b;*/
+}
+#nav *
+{
+    border: 4px outset #08002b;
+    border-radius: 15px;
+    padding: 8px;
+    background-color: rgba(255,255,255,.6);
+}
+#nav *:hover
+{
+    border-style: inset;
+   /* color: #08002b;
+    background-color: gold;*/
+    color: #08002b;
+/*    background-color: #060009;*/
+    cursor: pointer;
+}
+#body
+{
+    width:90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  /*  background-color: #08002b;*/
+}
+#detElem
+{
+    width:90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  /*  background-color: #08002b;*/
+}
+.contenerList {
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    width:90%;
+}
+.contenerList h1{
+    font-size: 1.5em;
+    width: 90%;
+    text-align: center;
+    
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-decoration-style: wavy;
+    margin-bottom: 30px;
+}
+#tabList, #tabDet
+{
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border: 4px outset #08002b;
+    background-color: rgba(255,255,255,.6);
+    border-radius: 15px;
+    padding: 8px;
+}
+#tabList .ligneList, #tabDet .ligneList
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+#tabList .ligneList:hover
+{
+    background-color: #08002b;
+    color: gold;
+    cursor: pointer;
+}
+#tabList .ligneList *
+{
+    background-color: inherit;
+    color: inherit;
+    cursor: inherit;
+
+}
+#tabDet .ligneList *{
+    margin:10px;
+    text-align: justify;
+}
+.contenerBout
+{
+    width:90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.contenerBout .bout
+{
+    border: 4px outset #08002b;
+    background-color: rgba(255,255,255,.6);
+    border-radius: 15px;
+    padding: 8px;
+}
+.contenerBout .bout:hover
+{
+    border-style: inset;
+   /* color: #08002b;
+    background-color: gold;*/
+    color: #08002b;
+   /* background-color: #060009;*/
+    cursor: pointer;
+}
+
+.Clickable:hover, .Clickable:hover *{
+    background-color: #08002b;
+    color: gold;
+    cursor: pointer;
+}
