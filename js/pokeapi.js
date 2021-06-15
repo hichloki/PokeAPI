@@ -45,10 +45,7 @@ function clickDetailBaies(url) {
         $("#detElem").html(JSON.stringify(data))
     })
 }
-$("#berriesList").click(() => {
 
-    clickSuivantBaies("https://pokeapi.co/api/v2/berry/")
-})
 
 //---------- PARTIE CONTEST-------------
 
@@ -495,6 +492,15 @@ function clickSuivantPoke(url) {
 function clickDetailPoke(url) {
     $.get(url, (data) => {
     console.log(data)
-        $("#detElem").html(JSON.stringify(data))
-    })
+
+    let affDet=""
+    affDet += "<div class='contenerList'>"
+    affDet += "<h1>Infos Complémentaires</h1>"
+    affDet += "<div id='tabList'>"
+
+      affDet += " <p> Poids :  "+data.weight+" Kgs   </p>"
+      affDet += "<p>  Taille : "+data.height+ " m  </p>"
+      $("#detElem").html(affDet)
+       
+})
 }
