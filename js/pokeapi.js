@@ -463,7 +463,7 @@ function clickSuivantPoke(url) {
         console.log(data)
         let affRes = ""
         affRes += "<div class='contenerList'>"
-        affRes += "<h1>Liste des moyens de rencontres</h1>"
+        affRes += "<h1>Liste des Pokemon</h1>"
         affRes += "<div id='tabList'>"
         for (let i in data.results) {
             affRes += "<div class='ligneList' onClick='clickDetailPoke(\""  + data.results[i].url + "\")'>"
@@ -498,8 +498,18 @@ function clickDetailPoke(url) {
     affDet += "<h1>Infos Complémentaires</h1>"
     affDet += "<div id='tabList'>"
 
+      affDet += " <p> Nom :  "+data.name+"   </p>"    
       affDet += " <p> Poids :  "+data.weight+" Kgs   </p>"
       affDet += "<p>  Taille : "+data.height+ " m  </p>"
+      affDet += "<img class='pokeimg' src="+data.sprites.front_default+" > "
+      for(let t in data.types){
+          if(data.types[t]>data.types[0]){
+      affDet += " <p> Type : "+data.types[t].type.name+" 'ET' "+data.types[t+1].type.name+"  </p>"
+    }else{
+
+        affDet += " <p> Type : "+data.types[t].type.name+" </p>"
+    }
+      }
       $("#detElem").html(affDet)
        
 })
